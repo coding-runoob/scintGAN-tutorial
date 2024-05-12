@@ -30,7 +30,7 @@ For more details about the GLUE framework, please check out our manuscript.
    :caption: Contents:
 
    install
-   tutorial
+   tutorials
    data
    reproduce
 
