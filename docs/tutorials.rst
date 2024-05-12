@@ -28,9 +28,10 @@ Before running scintGAN in terminal, please edit the file `hyper_parameters.py` 
 
 Then, for multiple scRNA-seq data set files in the same file folder, run the following command in terminal to integrate multiple data sets, and the preprocessing step can be performed by setting the argument `pp` to 1:
 
-```shell
-python scintGAN.py --file_name adata1.h5ad adata2.h5ad adata3.h5ad --pp 1
-```
+.. code-block:: bash
+    :linenos:
+    python scintGAN.py --file_name adata1.h5ad adata2.h5ad adata3.h5ad --pp 1
+
 
 The embeddings of stage one and stage two will be saved in `.obsm['X_scVGAN']` and `.obsm['X_scintGAN']` of `adata` which is input.
 
@@ -46,31 +47,38 @@ Reading and save as `h5ad` format
 
 After unzip these two file, `read_10x_mtx()` function in `Scanpy` package is recommended to read them.
 
-```python
-import scanpy as sc
-adata_3 = sc.read_10x_mtx('./pbmc3/GRCh38/')
-print(adata_3)
-adata_5 = sc.read_10x_mtx('./pbmc5/')
-print(adata_5)
-adata_3.write('./pbmc3.h5ad',compression = 'gzip')
-adata_5.write('./pbmc5.h5ad',compression = 'gzip')
-'''
+.. code-block:: bash
+    :linenos:
+
+    import scanpy as sc
+    adata_3 = sc.read_10x_mtx('./pbmc3/GRCh38/')
+    print(adata_3)
+    adata_5 = sc.read_10x_mtx('./pbmc5/')
+    print(adata_5)
+    adata_3.write('./pbmc3.h5ad',compression = 'gzip')
+    adata_5.write('./pbmc5.h5ad',compression = 'gzip')
+
 output:
-AnnData object with n_obs × n_vars = 8381 × 33694
-    var: 'gene_ids'
-AnnData object with n_obs × n_vars = 7231 × 33538
-    var: 'gene_ids', 'feature_types'
-'''
-```
-************************************************
+.. code-block:: bash
+    :linenos:
+
+    AnnData object with n_obs × n_vars = 8381 × 33694
+        var: 'gene_ids'
+    AnnData object with n_obs × n_vars = 7231 × 33538
+        var: 'gene_ids', 'feature_types'
+
+
+*******************************
 Integration by using scintGAN
-************************************************
+*******************************
 
 As shown in Running scintGAN section, we use the following command to integrate the two scRNA-seq PBMC data sets.
 
-```
-python scintGAN.py --file_name pbmc3.h5ad pbmc5.h5ad --pp 1
-```
+.. code-block:: bash
+    :linenos:
+
+    python scintGAN.py --file_name pbmc3.h5ad pbmc5.h5ad --pp 1
+
 
 ************************
 Output
@@ -84,17 +92,19 @@ Visualization
 
 For the integration results, we can use the following codes to visualize them.
 
-```
-adata = sc.read('./results.h5ad')
-batch_key='dataset'
-cell_type_key='cell_type'
+.. code-block:: bash
+    :linenos:
 
-sc.pp.neighbors(adata,use_rep='X_scintGAN')
-sc.tl.umap(adata)
+    adata = sc.read('./results.h5ad')
+    batch_key='dataset'
+    cell_type_key='cell_type'
+    
+    sc.pp.neighbors(adata,use_rep='X_scintGAN')
+    sc.tl.umap(adata)
+    
+    sc.pl.umap(adata, color=[batch_key],title='scintGAN'+' (Batch)')
+    sc.pl.umap(adata, color=[cell_type_key],title='scintGAN'+' (Cell Type)')
 
-sc.pl.umap(adata, color=[batch_key],title='scintGAN'+' (Batch)')
-sc.pl.umap(adata, color=[cell_type_key],title='scintGAN'+' (Cell Type)')
-```
 
 
 ************
@@ -122,6 +132,8 @@ Visualization
 
 Visualization of UMAP plots has been implemented in the file `visualization.py` . For a result integrated by scintGAN,  the following command can be used to visualize the UMAP plots.
 
-```shell
-python visualization.py --data_path ./results/results.h5ad
-```
+.. code-block:: bash
+    :linenos:
+
+    python visualization.py --data_path ./results/results.h5ad
+
