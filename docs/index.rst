@@ -29,10 +29,10 @@ For more details about the GLUE framework, please check out our manuscript.
    :maxdepth: 2
    :caption: Contents:
 
-   * : `Installation <install.rst>`__
-   * : `Tutorials <tutorials.rst>`__
-   * : `Data <data.rst>`__
-   * : `Reproduction <reproduce.rst>`__
+   *  `Installation <install.rst>`__
+   *  `Tutorials <tutorials.rst>`__
+   *  `Data <data.rst>`__
+   *  `Reproduction <reproduce.rst>`__
 
 
 
