@@ -2,15 +2,6 @@
 Tutorial
 ==================
 
-************
-Main package
-************
-
-The ``scglue`` package can be installed via conda using one of the following commands:
-
-.. code-block:: bash
-    :linenos:
-
 
 ************************************
 Input format and preprocessing
@@ -30,6 +21,7 @@ Then, for multiple scRNA-seq data set files in the same file folder, run the fol
 
 .. code-block:: bash
     :linenos:
+    
     python scintGAN.py --file_name adata1.h5ad adata2.h5ad adata3.h5ad --pp 1
 
 
