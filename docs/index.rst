@@ -18,7 +18,7 @@ scintGAN handles the general and specific batch effects with two stages respecti
 
 For more details, please see scintGAN manuscript.
 
-.. image:: _static/architecture.svg
+.. image:: _static/architecture.png
    :width: 600
    :alt: Model architecture
 
@@ -35,10 +35,7 @@ For a Chinese version of this documentation, please visit `https://scglue.readth
    install
    tutorials
    data
-   api
-   release
-   dev
-   credits
+   Reproduction
 
 
 
