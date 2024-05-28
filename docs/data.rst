@@ -1,26 +1,8 @@
 Datasets
 ================
 
-The following datasets were used in our manuscript. We provided the details and sources of all datasets:
-All data sets analyzed in this article are publicly available. We have shown the information in Data S1.
-Specifically, the preprocessed version of Human immune data set can be retrieved from https://figshare.
-com/ndownloader/files/25717328. Mouse brain data set can be downloaded from https://portal.
-brain-map.org/atlases-and-data/rnaseq/mouse-whole-cortex-and-hippocampus-10x. Two atlases
-of Multi-omics data set can be obtained from https://figshare.com/projects/Tabula_Muris_Transcriptomic
-characterization_of_20_organs_and_tissues_from_Mus_musculus_at_single_cell_resolution/27733
-and https://atlas.gs.washington.edu/mouse-atac/data/ respectively. The PBMC data set can be
-obtained from https://www.10xgenomics.com/resources/datasets/8-k-pbm-cs-from-a-healthy-donor-2-s
-and https://www.10xgenomics.com/resources/datasets/pbm-cs-of-a-healthy-donor-v-1-1-1-standard-
-Multiple PBMC data set can be obtained from Single Cell Portal and the accession code is SCP424. Human
-pancreas data set can be downloaded from https://hemberg-lab.github.io/scRNA.seq.datasets/
-human/pancreas/.[43] COVID-19 PBMC dataset can be downloaded from https://figshare.com/articles/
-dataset/seu_obj_h5ad/16922467. COVID-19 Lung can be obtained from GEO dataset and the accession
-code is GSE171524.
-Example datasets
-================
 
-By courtesy of the original authors, we provide here the following preprocessed
-data files used in our paper:
+We provide here the following preprocessed data files used in our paper:
 
 .. list-table::
    :widths: 15 15 5 5 32 3 25
