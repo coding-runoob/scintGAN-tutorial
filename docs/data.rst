@@ -16,6 +16,12 @@ pancreas data set can be downloaded from https://hemberg-lab.github.io/scRNA.seq
 human/pancreas/.[43] COVID-19 PBMC dataset can be downloaded from https://figshare.com/articles/
 dataset/seu_obj_h5ad/16922467. COVID-19 Lung can be obtained from GEO dataset and the accession
 code is GSE171524.
+Example datasets
+================
+
+By courtesy of the original authors, we provide here the following preprocessed
+data files used in our paper:
+
 .. list-table::
    :widths: 15 15 5 5 32 3 25
    :header-rows: 1
@@ -23,9 +29,10 @@ code is GSE171524.
    * - Dataset
      - Protocol
      - Species
-     - Tissues/Organs
+     - Organ
+     - Publication
      - Source
-     - Features
+     - Processed files
    * - Chen-2019
      - SNARE-seq
      - Mouse
